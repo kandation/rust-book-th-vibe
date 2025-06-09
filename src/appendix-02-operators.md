@@ -1,6 +1,6 @@
 ## ภาคผนวก B: Operators (ตัวดำเนินการ) และ Symbols (สัญลักษณ์)
 
-ภาคผนวกนี้ประกอบด้วยอภิธานศัพท์ของ синтаксис Rust รวมถึงตัวดำเนินการและสัญลักษณ์อื่นๆ ที่ปรากฏด้วยตัวเองหรือในบริบทของ paths, generics, trait bounds, macros, attributes, comments, tuples, และวงเล็บ
+ภาคผนวกนี้ประกอบด้วยอภิธานศัพท์ของไวยากรณ์ Rust รวมถึงตัวดำเนินการและสัญลักษณ์อื่นๆ ที่ปรากฏด้วยตัวเองหรือในบริบทของ paths, generics, trait bounds, macros, attributes, comments, tuples, และวงเล็บ
 
 ### Operators (ตัวดำเนินการ)
 
@@ -37,7 +37,7 @@
 | `.`                       | `expr.0`, `expr.1`, etc.                                | การเข้าถึงสมาชิก Tuple (Tuple indexing)                               |                |
 | `..`                      | `..`, `expr..`, `..expr`, `expr..expr`                  | ช่วงค่าแบบไม่รวมค่าขวา (Right-exclusive range literal)                | `PartialOrd`   |
 | `..=`                     | `..=expr`, `expr..=expr`                                | ช่วงค่าแบบรวมค่าขวา (Right-inclusive range literal)                   | `PartialOrd`   |
-| `..`                      | `..expr`                                                | синтаксисอัปเดต Struct literal (Struct literal update syntax)         |                |
+| `..`                      | `..expr`                                                | ไวยากรณ์อัปเดต Struct literal (Struct literal update syntax)         |                |
 | `..`                      | `variant(x, ..)`, `struct_type { x, .. }`               | การผูกรูปแบบ “และส่วนที่เหลือ” (“And the rest” pattern binding)       |                |
 | `...`                     | `expr...expr`                                           | (เลิกใช้แล้ว, ให้ใช้ `..=` แทน) ในรูปแบบ: รูปแบบช่วงค่าแบบรวม       |                |
 | `/`                       | `expr / expr`                                           | การหาร (Arithmetic division)                                          | `Div`          |
@@ -46,14 +46,14 @@
 | `:`                       | `ident: expr`                                           | การกำหนดค่าเริ่มต้นฟิลด์ของ Struct (Struct field initializer)         |                |
 | `:`                       | `'a: loop {...}`                                        | ป้ายกำกับลูป (Loop label)                                              |                |
 | `;`                       | `expr;`                                                 | ตัวสิ้นสุดคำสั่งและไอเท็ม (Statement and item terminator)             |                |
-| `;`                       | `[...; len]`                                            | ส่วนหนึ่งของ синтаксисอาร์เรย์ขนาดคงที่ (fixed-size array syntax)      |                |
+| `;`                       | `[...; len]`                                            | ส่วนหนึ่งของ ไวยากรณ์อาร์เรย์ขนาดคงที่ (fixed-size array syntax)      |                |
 | `<<`                      | `expr << expr`                                          | เลื่อนบิตไปทางซ้าย (Left-shift)                                       | `Shl`          |
 | `<<=`                     | `var <<= expr`                                          | เลื่อนบิตไปทางซ้ายและการกำหนดค่า (Left-shift and assignment)           | `ShlAssign`    |
 | `<`                       | `expr < expr`                                           | การเปรียบเทียบน้อยกว่า (Less than comparison)                         | `PartialOrd`   |
 | `<=`                      | `expr <= expr`                                          | การเปรียบเทียบน้อยกว่าหรือเท่ากับ (Less than or equal to comparison)   | `PartialOrd`   |
 | `=`                       | `var = expr`, `ident = type`                            | การกำหนดค่า/ความเท่ากัน (Assignment/equivalence)                      |                |
 | `==`                      | `expr == expr`                                          | การเปรียบเทียบความเท่ากัน (Equality comparison)                       | `PartialEq`    |
-| `=>`                      | `pat => expr`                                           | ส่วนหนึ่งของ синтаксисแขนง match (match arm syntax)                     |                |
+| `=>`                      | `pat => expr`                                           | ส่วนหนึ่งของ ไวยากรณ์แขนง match (match arm syntax)                     |                |
 | `>`                       | `expr > expr`                                           | การเปรียบเทียบมากกว่า (Greater than comparison)                       | `PartialOrd`   |
 | `>=`                      | `expr >= expr`                                          | การเปรียบเทียบมากกว่าหรือเท่ากับ (Greater than or equal to comparison) | `PartialOrd`   |
 | `>>`                      | `expr >> expr`                                          | เลื่อนบิตไปทางขวา (Right-shift)                                       | `Shr`          |
@@ -73,7 +73,7 @@
 
 ตาราง B-2 แสดงสัญลักษณ์ที่ปรากฏด้วยตัวเองและสามารถใช้งานได้ในหลากหลายตำแหน่ง
 
-<span class="caption">ตาราง B-2: синтаксисแบบสแตนด์อโลน</span>
+<span class="caption">ตาราง B-2: ไวยากรณ์แบบสแตนด์อโลน</span>
 
 | สัญลักษณ์                                    | คำอธิบาย                                                                 |
 | --------------------------------------------- | ---------------------------------------------------------------------- |
@@ -91,12 +91,12 @@
 
 ตาราง B-3 แสดงสัญลักษณ์ที่ปรากฏในบริบทของ path ผ่านลำดับชั้นของโมดูลไปยังไอเท็ม
 
-<span class="caption">ตาราง B-3: синтаксисที่เกี่ยวข้องกับ Path</span>
+<span class="caption">ตาราง B-3: ไวยากรณ์ที่เกี่ยวข้องกับ Path</span>
 
 | สัญลักษณ์                                  | คำอธิบาย                                                                                                                        |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `ident::ident`                          | Namespace path                                                                                                                  |
-| `::path`                                | Path ที่สัมพันธ์กับ extern prelude ซึ่งเป็นที่ตั้งของ крейт อื่นๆ ทั้งหมด (เช่น path แบบสัมบูรณ์ที่ระบุชื่อ крейт อย่างชัดเจน) |
+| `::path`                                | Path ที่สัมพันธ์กับ extern prelude ซึ่งเป็นที่ตั้งของ crate อื่นๆ ทั้งหมด (เช่น path แบบสัมบูรณ์ที่ระบุชื่อ crate อย่างชัดเจน) |
 | `self::path`                            | Path ที่สัมพันธ์กับโมดูลปัจจุบัน (เช่น path แบบสัมพัทธ์ที่ระบุอย่างชัดเจน)                                                       |
 | `super::path`                           | Path ที่สัมพันธ์กับโมดูลแม่ของโมดูลปัจจุบัน                                                                                       |
 | `type::ident`, `<type as trait>::ident` | ค่าคงที่, ฟังก์ชัน, และไทป์ที่เกี่ยวข้อง (Associated constants, functions, and types)                                          |
@@ -116,7 +116,7 @@
 | `fn ident<...> ...`            | กำหนดฟังก์ชัน generic                                                                                                                      |
 | `struct ident<...> ...`        | กำหนด structure แบบ generic                                                                                                               |
 | `enum ident<...> ...`          | กำหนด enumeration แบบ generic                                                                                                             |
-| `impl<...> ...`                | กำหนด υλοποίηση (implementation) แบบ generic                                                                                                |
+| `impl<...> ...`                | กำหนด implementation แบบ generic                                                                                                |
 | `for<...> type`                | Higher-ranked lifetime bounds                                                                                                            |
 | `type<ident=type>`             | Generic type ที่มี associated type อย่างน้อยหนึ่งรายการมีการกำหนดค่าเฉพาะ (เช่น `Iterator<Item=T>`)                                         |
 
@@ -126,7 +126,7 @@
 
 | สัญลักษณ์                        | คำอธิบาย                                                                                                                                    |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `T: U`                        | พารามิเตอร์ generic `T` ถูกจำกัดให้เป็นไทป์ที่ υλοποιώ (implement) `U`                                                                        |
+| `T: U`                        | พารามิเตอร์ generic `T` ถูกจำกัดให้เป็นไทป์ที่ implement `U`                                                                        |
 | `T: 'a`                       | Generic type `T` ต้องมี lifetime ยาวนานกว่า `'a` (หมายความว่าไทป์นั้นไม่สามารถมีการอ้างอิงใดๆ ที่มี lifetime สั้นกว่า `'a` ได้โดยปริยาย) |
 | `T: 'static`                  | Generic type `T` ไม่มี borrowed references อื่นใดนอกจาก `'static`                                                                          |
 | `'b: 'a`                      | Generic lifetime `'b` ต้องมี lifetime ยาวนานกว่า `'a`                                                                                       |

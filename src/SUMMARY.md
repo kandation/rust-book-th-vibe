@@ -28,7 +28,7 @@
 - [การใช้ Structs เพื่อจัดกลุ่มข้อมูลที่เกี่ยวข้องกัน](ch05-00-structs.md)
   - [การกำหนดและการสร้าง Structs](ch05-01-defining-structs.md)
   - [ตัวอย่างโปรแกรมที่ใช้ Structs](ch05-02-example-structs.md)
-  - [ синтаксис методов (Method Syntax)](ch05-03-method-syntax.md)
+  - [ไวยากรณ์ของเมธอด (Method Syntax)](ch05-03-method-syntax.md)
 
 - [Enums และ Pattern Matching](ch06-00-enums.md)
   - [การกำหนด Enum](ch06-01-defining-an-enum.md)
@@ -102,7 +102,7 @@
   - [Concurrency ที่ขยายได้ด้วย `Send` และ `Sync` Traits](ch16-04-extensible-concurrency-sync-and-send.md)
 
 - [พื้นฐานของการเขียนโปรแกรมแบบ Asynchronous: Async, Await, Futures, และ Streams](ch17-00-async-await.md)
-  - [Futures และ синтаксис Async](ch17-01-futures-and-syntax.md)
+  - [Futures และไวยากรณ์ Async](ch17-01-futures-and-syntax.md)
   - [การประยุกต์ใช้ Concurrency กับ Async](ch17-02-concurrency-with-async.md)
   - [การทำงานกับ Futures จำนวนเท่าใดก็ได้](ch17-03-more-futures.md)
   - [Streams: Futures ตามลำดับ](ch17-04-streams.md)
@@ -119,7 +119,7 @@
 - [Patterns และ Matching](ch19-00-patterns.md)
   - [ทุกที่ที่สามารถใช้ Patterns ได้](ch19-01-all-the-places-for-patterns.md)
   - [Refutability: Pattern อาจไม่ Match หรือไม่](ch19-02-refutability.md)
-  - [ синтаксис Pattern (Pattern Syntax)](ch19-03-pattern-syntax.md)
+  - [ไวยากรณ์ Pattern (Pattern Syntax)](ch19-03-pattern-syntax.md)
 
 - [ฟีเจอร์ขั้นสูง](ch20-00-advanced-features.md)
   - [Unsafe Rust](ch20-01-unsafe-rust.md)
